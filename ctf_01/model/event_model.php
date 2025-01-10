@@ -1,11 +1,15 @@
 <?php 
 
+// The database connection
 $conn = mysqli_connect("localhost", "os_jmistry", "os_jmistry136", "PROJECT_os_jmistry");
 if(!$conn){
 
     echo "Database connection failure";
 }
 else{
+    // All the modular functions or buisness logic should go here
+
+    // Note: Database Tables are not created yet
     function login_user($e, $user_p){
         global $conn;
         $dql = "SELECT username, pass FROM forum_users where email = '$e'";
@@ -28,6 +32,5 @@ else{
         }
 }
 }
-
 
 ?>
