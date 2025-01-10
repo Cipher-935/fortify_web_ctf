@@ -1,0 +1,231 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 200;
+  height: 100vh;
+  }
+
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  align-self: flex-end;
+  padding: 3px;
+  top: 1px;
+  border: 1px solid red;
+  justify-content: flex-end;
+  }
+
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid red;
+    margin-bottom: 1px;
+    box-shadow: 3px 3px 3px 2px red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+  }
+
+  .navbar a:hover {
+    background-color: red;
+    transition: all 0.3s ease;
+  }
+  
+  .f_tag {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 1px;
+    width: 100%;
+  }
+
+  .options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .s_container {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    border: 1px solid red;
+    box-shadow: 4px 4px 4px red;
+    padding: 10px;
+    width: 400px;
+    height: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+  }
+  h2{
+    color: white;
+  }
+
+  
+  input{
+    width: 100%;
+    padding: 6px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid red;
+    box-shadow: 2px 2px 2px red;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+
+  
+  h2 {
+    text-align: center;
+    
+  }
+  
+  label{
+    margin-top: 20px;
+    font-size: 18px;
+   
+  }
+
+  #btn_sign{
+    padding: 6px;
+    font-size: 19px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    box-shadow: 3px 3px 3px red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  #btn_sign:hover{
+  
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+  #btn_unregister{
+    padding: 6px;
+    font-size: 19px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid red;
+    box-shadow: 3px 3px 3px red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+  
+  #btn_unregister:hover{
+  
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+
+
+  .redirect_login{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 6px;
+    border: 1px solid red;
+    box-shadow: 3px 3px 3px red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+  .redirect_login:hover{
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .s_msg{
+    color: white;
+    box-shadow: 3px 3px 3px 1px red;
+    text-align: center;
+  }
+  .in_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px;
+  }
+  .hidden_unregister{
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 16px;
+    border-radius: 2px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+    box-shadow: 3px 3px 3px red;
+  }
+
+  .inner_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #inner_submit{
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    font-size: 17px;
+    color: white;
+    border:  1px solid red;
+    box-shadow: 2px 2px 2px red;
+  }
+  #inner_submit:hover{
+      cursor: pointer;
+      background-color: red;
+      transition: all 0.3s ease;
+  }
+
+  #btn_cancel{
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    font-size: 17px;
+    color: white;
+    border:  1px solid red;
+    box-shadow: 2px 2px 2px red;
+  }
+  #btn_cancel:hover{
+      cursor: pointer;
+      background-color: red;
+      transition: all 0.3s ease;
+  }
+
+
