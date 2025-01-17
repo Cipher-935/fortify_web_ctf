@@ -3,12 +3,12 @@
     $fileToUpload = "myImage.jpg";
 
     
-    $fileName = "Sheep1.jpg";
+    $fileName = "forum_logo.jpg";
         // Directory one level up
-        $uploadDir = dirname(__DIR__);
+        $currentDir = dirname(__DIR__);
 
         // Create the full path for the uploaded file
-        $destPath = $uploadDir . "/" . $fileName;
+        $destPath = $currentDir . "/images/" . $fileName;
 
         try{
             $fileContent = file_get_contents($fileToUpload);

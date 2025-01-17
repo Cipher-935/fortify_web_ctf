@@ -7,6 +7,3 @@
     <link rel="stylesheet" href="../views/css/homepage.css">
 </head>
 <body>
-<div class="navbar">
-        <a class="active flag" href="event_controller.php?val=home">Home</a>
-</div>

@@ -1,5 +1,5 @@
 <?php  require("../views/headers/header_home.php");?>
 <div class="content">  
-    <h1>Ctf Home</h1>
+    <img src="./images/forum_logo.jpg">
+    <p>Las Piratas</p>
 </div>
-<?php require("../views/footer.php");?>
