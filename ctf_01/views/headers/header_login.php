@@ -15,7 +15,7 @@
 
 <!-- <div class="navbar">
 <a class="active" href="forum_controller.php">Home</a>
-<a href="forum_controller.php?val=login">Profile</a>
+<a href="forum_controller.php?val=rdfxeshypoi">Profile</a>
 <a href="forum_controller.php?val=forum">Discussion Forum</a>
 <a href="forum_controller.php?val=messages">Messages</a> -->
 
@@ -24,5 +24,4 @@
 
 <div class="navbar">
         <a class="active" href="event_controller.php?val=home">Home</a>
-        <a href="event_controller.php?val=login">Profile</a>
 </div>

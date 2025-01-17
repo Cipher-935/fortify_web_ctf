@@ -64,9 +64,13 @@
     border: 2px solid red;
   }
 
-  .flag
-  {
-    /* FTW{0h_y0u_f0und_us} */
+.view_logs{
+    font-size: 18px;
+    background-color: red;
     color: white;
-  }
-
+    padding: 8px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+}
