@@ -20,8 +20,8 @@
 <a href="forum_controller.php?val=messages">Messages</a> -->
 
 <!-- </div> -->
-
+<!-- 
 
 <div class="navbar">
         <a class="active" href="event_controller.php?val=home">Home</a>
-</div>
+</div> -->

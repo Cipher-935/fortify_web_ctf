@@ -1,421 +1,395 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-    height: 100vh;
-    }
-  
-.login_header{
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-color: white;
-text-align:center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "Source Code Pro", serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  height: 100vh;
+}
+
+.login_header {
+  color: white;
+  text-align:center;
 }
   
-    .navbar {
-      background-color: black;
-      overflow: hidden;
-      width: fit-content;
-      display: flex;
-      flex-direction: row;
-      position: fixed;
-      align-self: flex-end;
-      padding: 3px;
-      top: 1px;
-      border: 1px solid red;
-      justify-content: flex-end;
-      }
-    
-      .navbar a {
-        color: white;
-        text-align: center;
-        padding: 10px;
-        text-decoration: none;
-        border: 1px solid red;
-        margin-bottom: 1px;
-        box-shadow: 3px 3px 3px 2px red;
-      
-      }
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  align-self: flex-end;
+  padding: 3px;
+  top: 1px;
+  border: 1px solid red;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid red;
+  margin-bottom: 1px;
+}
+
+.navbar a:hover {
+  background-color: red;
+  transition: all 0.2s ease;
+}
+
+.f_tag {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 3px;
+  width: 100%;
+}
+
+.other_options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.l_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+}
+
+.l_container {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: 1px solid red;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+
   
-    .navbar a:hover {
-      background-color: red;
-      transition: all 0.2s ease;
-    }
-    
-    .f_tag {
-      background-color: black;
-      color: white;
-      text-align: center;
-      position: fixed;
-      bottom: 3px;
-      width: 100%;
-      
-    }
+}
+
+h2 {
+  text-align: center;
+  color: white;
+
+}
+
+input {
+
+  width: 100%;
+  padding: 6px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Source Code Pro", serif;
+  font-style: italic;
+  font-weight: 200;
+
+}
+
+.btn_options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
   
-  .other_options{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  .l_form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
-  }
-  
-  .l_container {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    border: 1px solid red;
-    box-shadow: 4px 4px 4px red;
-    padding: 10px;
-    width: fit-content;
-    height: fit-content;
-    color: white;
-  
-   
-  }
-  
-  h2 {
-    text-align: center;
-    color: white;
-  
-  }
-  
-  input {
-  
-    width: 100%;
-    padding: 6px;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    border: 1px solid red;
-    box-shadow: 2px 2px 2px red;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  
-  }
-  
-  .btn_options{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
-    
-  }
-  
-  label{
-    margin-top: 20px;
-    font-size: 17px;  
-  }
-  
-  #btn_login{
-    padding: 6px;
-    font-size: 19px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  
-  #btn_login:hover{
-  
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  
-  
-  #btn_update{
-    padding: 6px;
-    font-size: 19px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border: 1px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  
-  }
-  
-  #btn_update:hover{
-  
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  h3{
-    font-size: 21px;
-  }
-  
-  #btn_forgot{
-    font-size: 19px;
-    color: white;
-    text-align: center;
-    border: 1px solid red;
-    background-color: black;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  
-  #btn_forgot:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  .redirect_signup{
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    border: 1px solid red;
-    font-size: 20px;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-    padding: 6px;
-  }
-  .redirect_signup:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-  .s_msg{
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    border: 2px solid red;
-    text-align: center;
-    box-shadow: 2px 2px 2px red;
-  }
-  .hidden_forgot{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 16px;
-    border-radius: 2px solid white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-  }
-  .hidden_update{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 28px;
-    border-radius: 2px solid white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-  }
-  
-  .btn_send{
-    background-color: black;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 6px;
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  .btn_send:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .btn_cancel{
-    background-color: black;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 6px;
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  .btn_cancel:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .btn_abort{
-    background-color: black;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 12px;
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  .btn_abort:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .c_btn{
-    background-color: black;
-    color: white;
-    width: fit-content;
-    height: fit-content;
-    padding: 12px;
-    border: 2px solid red;
-    box-shadow: 3px 3px 3px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  .c_btn:hover{
-    background-color: red;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .l_buttons{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    padding: 4px;
-    border: 1px solid red;
-  }
-  .m_buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .update_check{
-    display: none;
-  }
-  .hidden_u_form{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    padding: 6px;
-    border: 1px solid red;
-    margin-top: 5px;
-  }
-  .hidden_e_form{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    padding: 6px;
-    border: 1px solid red;
-    margin-top: 5px;
-  }
-  .hidden_p_form{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    padding: 6px;
-    border: 1px solid red;
-    margin-top: 5px;
-  }
-  #inner_u_submit{
-    width: fit-content;
-    height: fit-content;
-    padding: 6px;
-    background: black;
-    color: white;
-    border: 1px solid red;
-    box-shadow: 2px 2px 2px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  #inner_u_submit:hover{
-    background-color: red;
-    transition: all 0.3s ease;
-  }
-  
-  #inner_p_submit{
-    width: fit-content;
-    height: fit-content;
-    padding: 6px;
-    background: black;
-    color: white;
-    border: 1px solid red;
-    box-shadow: 2px 2px 2px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  #inner_p_submit:hover{
-    background-color: red;
-    transition: all 0.3s ease;
-  }
-  
-  #inner_e_submit{
-    width: fit-content;
-    height: fit-content;
-    padding: 6px;
-    background: black;
-    color: white;
-    border: 1px solid red;
-    box-shadow: 2px 2px 2px red;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-style: italic;
-    font-weight: 200;
-  }
-  #inner_e_submit:hover{
-    background-color: red;
-    transition: all 0.3s ease;
-  }
-  .e_hidden{
-    display: none;
-  }
-  .hidden_pic_form{
-    display: none;
-    flex-direction: column;
-    background-color: black;
-    color: white;
-    padding: 6px;
-  
-  }
+}
+
+label {
+  margin-top: 20px;
+  font-size: 17px;  
+}
+
+#btn_login {
+  padding: 6px;
+  font-size: 19px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid red;
+  font-family: "Source Code Pro", serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+#btn_login:hover{
+
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+
+#btn_update{
+  padding: 6px;
+  font-size: 19px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border: 1px solid red;
+  font-family: "Source Code Pro", serif;
+  font-weight: 200;
+
+}
+
+#btn_update:hover{
+
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+h3{
+  font-size: 21px;
+}
+
+#btn_forgot{
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  border: 1px solid red;
+  background-color: black;
+  font-weight: 200;
+}
+
+#btn_forgot:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.redirect_signup{
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border: 1px solid red;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 6px;
+}
+.redirect_signup:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.s_msg{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  border: 2px solid red;
+  text-align: center;
+}
+.hidden_forgot{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 16px;
+  border-radius: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid red;
+}
+.hidden_update{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 28px;
+  border-radius: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid red;
+}
+
+.btn_send{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  border: 2px solid red;
+  font-weight: 200;
+}
+
+.btn_send:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn_cancel{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  border: 2px solid red;
+  font-weight: 200;
+}
+
+.btn_cancel:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn_abort{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
+  border: 2px solid red;
+  font-weight: 200;
+}
+
+.btn_abort:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.c_btn{
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 12px;
+  border: 2px solid red;
+  font-weight: 200;
+}
+
+.c_btn:hover{
+  background-color: red;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.l_buttons{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  padding: 4px;
+  border: 1px solid red;
+}
+
+.m_buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.update_check{
+  display: none;
+}
+.hidden_u_form{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+.hidden_e_form{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+.hidden_p_form{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border: 1px solid red;
+  margin-top: 5px;
+}
+
+#inner_u_submit{
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  background: black;
+  color: white;
+  border: 1px solid red;
+  font-weight: 200;
+}
+
+#inner_u_submit:hover {
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+#inner_p_submit {
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  background: black;
+  color: white;
+  border: 1px solid red;
+  font-weight: 200;
+}
+#inner_p_submit:hover{
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+#inner_e_submit{
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  background: black;
+  color: white;
+  border: 1px solid red;
+  font-weight: 200;
+}
+#inner_e_submit:hover{
+  background-color: red;
+  transition: all 0.3s ease;
+}
+.e_hidden{
+  display: none;
+}
+.hidden_pic_form{
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 6px;
+
+}
   
   

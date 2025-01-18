@@ -8,7 +8,6 @@
     <script src = "../views/js/admin.js"></script>
 </head>
 <body>
-<div class="navbar">
+<!-- <div class="navbar">
         <a class="active" href="event_controller.php?val=home">Home</a>
-</div>
-
+</div> -->

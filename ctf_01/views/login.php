@@ -13,7 +13,3 @@
         <button id = "btn_login" type = "submit">Log in</button>
       </form>
 </div>
-
-
-
-<?php require("../views/footer.php"); ?>
