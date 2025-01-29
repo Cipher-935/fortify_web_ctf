@@ -22,6 +22,7 @@ body {
     justify-content: space-around;
     padding: 10px 0;
     border-bottom: 2px solid red;
+    margin-bottom: 20px;
 }
 
 .navbar a {
