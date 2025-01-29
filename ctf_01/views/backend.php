@@ -14,16 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
         chmod($uploadFile, 0644); // Set permissions
         
-        echo "<body style='background-color:black;'>
-                <h2 style='background-color: red; color: white;'>
-                    File was uploaded successfully and can be found at: 
-                    <a href='$uploadFile'>" . htmlspecialchars($_FILES['file']['name']) . "</a>
-                </h2>
-                <br><br>
-                <form action='fileShredder.html' method='post'>
-                    <button type='submit'>Upload more files</button>
-                </form>
-              </body>";
+        echo "  <link rel='stylesheet' href='../views/css/admin_dashboard.css'>
+                <body style='background-color:black;'>
+                    <h2 style='background-color: red; color: white;'>
+                        File was uploaded successfully and can be found at: 
+                        <a href='$uploadFile'>" . htmlspecialchars($_FILES['file']['name']) . "</a>
+                    </h2>
+                    <br><br>
+                    <form action='fileShredder.html' method='post'>
+                        <button type='submit'>Upload more files</button>
+                    </form>
+                </body>";
     } else {
         echo "Failed to upload file.";
     }
