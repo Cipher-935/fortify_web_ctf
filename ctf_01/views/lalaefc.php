@@ -14,7 +14,6 @@
     <div class="navbar">
         <a class="active" href="event_controller.php?val=home">Home</a>
         <a class="active" href="event_controller.php?val=eajmpu">Upload</a>
-        <a href="event_controller.php?val=i4wovbdxft">Messages</a>
     </div>
 
     <div class="content">
@@ -22,10 +21,9 @@
         <div class="dashboard-sections">
             <div class="section">
                 <h2>Server Actions</h2>
-                <button class="view_logs" onclick="viewLogs()">View Stolen Data</button>
                 <div style="display: flex; flex-direction:column; padding: 7px;width:fit-content;margin-left:5px;">
                     <h3 style="color: white;">Alert Gang!</h3>
-                    <textarea rows="4" cols="27" placeholder="Enter your message here" style="padding: 4px;"
+                    <textarea rows="4" cols="27" placeholder="Enter your message here" style="padding: 4px;background-color:black;color:red;border:2px solid red;"
                         id="txt_mess"></textarea>
                     <button
                         style="color: white; background-color:red; border:none;border-radius: 5px; width:fit-content;padding: 4px;text-align:center;margin-top:8px;"

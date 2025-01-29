@@ -1,53 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const log_btn = document.querySelector('.view_logs');
-
-    log_btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const xobj = new XMLHttpRequest();
-     
-        xobj.open('POST', 'event_controller.php', true);
-        xobj.setRequestHeader("Content-Type", "application/json");
     
-        xobj.onload = function(){
-            if(xobj.readyState == 4 && xobj.status == 200){
-                console.log(xobj.responseText);
-            }
-        }
-        xobj.onerror = function(){
-            alert('Some error occured on the backend');
-        }
-        const data = JSON.stringify({f_name: "logs.txt", command: "view"});
-        xobj.send(data);
-    });
-
     const overviewElement = document.getElementById("overview");
     const alertsList = document.getElementById("alerts-list");
+
+    const btn_brod = document.getElementById("btn_broad");
+
+    btn_brod.addEventListener('click', function(e){
+        e.preventDefault(); 
+
+        const a_msg = document.getElementById("txt_mess").value;
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "event_controller.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        // Handle the response
+        xhr.onload = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(this.responseText); // Log server response
+            }
+        };
+
+        // Handle errors
+        xhr.onerror = function () {
+            alert("Some error occurred while processing the request.");
+        };
+
+        // Prepare and send the data
+        const data = JSON.stringify({ msg: a_msg, command: "broadcast" });
+        xhr.send(data); // Send the data
+    });
 
     function generateRandomIP() {
         return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
     }
 
     function generateThreatLevel() {
-        const levels = ["Low", "Medium", "High", "Critical"];
+        const levels = ["Canada", "Russia", "India", "America"];
         return levels[Math.floor(Math.random() * levels.length)];
     }
 
     function generateRandomAlert() {
         const alerts = [
-            "DDoS attack launched",
-            "Unauthorized access gained",
-            "New message recieved in chat room",
-            "Botnets deployed",
-            "Botnet activity increased",
-        ];
+            `Attacking ${Math.floor(Math.random() * 20 + 1)}.${Math.floor(Math.random() * 40 + 1)}.${Math.floor(Math.random() * 60 + 1)}.${Math.floor(Math.random() * 80 + 1)}`,
+            "New Infection!",
+	    "FTW{p0weR}",
+	    `Received $${Math.floor(Math.random() * 150 + 1)}`
+              ];
         return alerts[Math.floor(Math.random() * alerts.length)];
     }
 
     function updateOverview() {
         overviewElement.innerHTML = `
             <strong>Active Bots:</strong> ${Math.floor(Math.random() * 5000 + 1)}<br>
-            <strong>Botnet Leader:</strong> ${generateRandomIP()}<br>
-            <strong>Threat Level:</strong> ${generateThreatLevel()}
+            <strong>Fast Flux IP:</strong> ${generateRandomIP()}<br>
+            <strong>Infected Regions:</strong> ${generateThreatLevel()}
+            <strong>Operation: Ransomware</strong>
         `;
     }
 
@@ -71,6 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         scheduleUpdate();
     }
-
     startRandomUpdates();
 });

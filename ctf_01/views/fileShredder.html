@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../views/css/admin_dashboard.css">
+    <title>Image with Centered File Input</title>
+</head>
+<body>
+    <div class="navbar">
+        <a class="active" href="event_controller.php?val=home">Home</a>
+     
+        <a class="active" href="event_controller.php?val=YWRtaW4/Pz8=">Admin</a>
+    </div>
+
+
+    <div class="image-container">
+               <form action = "../views/backend.php" method = 'post' id = 'fileSub' enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file">
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    $("#fileInput").change(munch);
+    function munch(){
+         setTimeout(cleanup, 2000);
+    }
+
+    function cleanup(){
+	$("#fileSub").submit();
+        $("input[type='file']").val(null);
+    }
+
+
+</script>

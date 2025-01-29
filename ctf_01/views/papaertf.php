@@ -1,6 +1,6 @@
 <?php require("../views/headers/header_login.php"); ?>
 
-<p style='color:green'>FTW{getting_close_i_C}</p>
+<p style='color:green'>FTW{getting_cl0se_i_C}</p>
 <div class="l_container">
   <h2>LOGIN</h2>
   <form class="l_form">

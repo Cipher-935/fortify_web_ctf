@@ -1,20 +1,34 @@
 <?php
-// Directory where files will be uploaded
-$uploadDirectory = "uploads/";
 
-// Check if the upload directory exists; if not, create it
-if (!is_dir($uploadDirectory)) {
-    mkdir($uploadDirectory, 0777, true); 
-}
+$uploadDirectory = "images/";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $uploadFile = $uploadDirectory . basename($_FILES['file']['name']);
     
-    if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
-        echo "<body style = 'background-color:black;'><h2 style = 'background-color: red; color: white;'>Dolly loved that one, see it here: 
-        <a href='$uploadFile'>" . htmlspecialchars($_FILES['file']['name']) . "</h2></p><br><br><form action = 'fileShredder.html' method = 'post'><button type = 'submit'>Feed Dolly More</button></form></body>";
+    // Check if file exists
+    if (file_exists($uploadFile)) {
+        echo "<h1>This file already exists on the server</h1>";
+    }
+    else{
+
+	if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
+        chmod($uploadFile, 0644); // Set permissions
+        
+        echo "<body style='background-color:black;'>
+                <h2 style='background-color: red; color: white;'>
+                    File was uploaded successfully and can be found at: 
+                    <a href='$uploadFile'>" . htmlspecialchars($_FILES['file']['name']) . "</a>
+                </h2>
+                <br><br>
+                <form action='fileShredder.html' method='post'>
+                    <button type='submit'>Upload more files</button>
+                </form>
+              </body>";
     } else {
         echo "Failed to upload file.";
     }
+
+    }
+    
 }
 ?>
